@@ -234,6 +234,10 @@ To complete your Free Trial signup, you must provide a credit card or other paym
 
 **Uwaga:** Każda inna technologia / Biblioteka jak najbardziej mile widziana, jeśli pomoże Ci osiągnąć zamierzony cel — zgodnie z opisanymi na początku zasadami :) 
 
+## Rozgrywka — Quiz
+Rozgrywka polega na odpowiadaniu na rozpoznawaniu co lub kto wyświetla się na obrazie po lewej stronie. Do wyboru są 4 opcje, z czego zawsze tylko jedna jest prawidłowa. W tym samym czasie obraz rozpoznaje także komputer, który rywalizuje z graczem (wyniki komputera nie zapisują się w rankingu). Wynik gracza z jednej gry to ilość dobrych odpowiedzi.
+
+Czas pozostały do końca rozgrywki odlicza miecz świetlny na dole ekranu.
 
 ## Porady odnośnie do projektu
 - Dzięki testing-library, elementy widoku (DOM) można testować wg Guide: https://testing-library.com/docs/dom-testing-library/example-intro
