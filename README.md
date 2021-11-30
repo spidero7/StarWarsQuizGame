@@ -1,7 +1,5 @@
-**UWAGA! Zaczynając pracę nad projektem — nie róbcie forka.
-Jedna osoba z zespołu (np. Mentor) powinna użyć przycisku `Use this template` i dodać innych członków zespołu jako Collaborators do tego repozytorium.**
 
-# CodersCamp 2020 - Projekt JavaScript
+# CodersCamp 2021 - Projekt JavaScript
 **CodersCamp (coderscamp.edu.pl) - Największy otwarty kurs programowania webowego** 
 
 Wykorzystanie asynchronicznego JavaScript oraz korzystanie z REST API.
@@ -104,42 +102,6 @@ Mogą być takie dni, że nie uda nam się zrobić nic albo po prostu nie planow
 Najważniejsza jest komunikacja, aby wiedzieć, jaki jest status projektu.
 Warto też organizować co tydzień zdzwonki, aby nie tylko pisać, ale też porozmawiać jak idzie projekt i ewentualnie poprosić mentora o pomoc / wyjaśnienia itp. 
 Pamiętajcie, że mentor jest ciągle do waszej dyspozycji, więc nie musicie specjalnie czekać, żeby się z nim skomunikować.
-
-
-##### Sposób oceny projektu (i wszystkich kolejnych projektów na CodersCamp)
-Zapewne interesuje Was, w jaki sposób projekt zostanie „zaliczony” i oceniony.
-Ocenianie będzie miało kilka etapów i trochę różni się od projektu pierwszego.
-Wynika to z tego, że teraz realizujecie projekt zespołowo i jesteście oceniani jako zespół.
-
-- Kiedy skończycie pracę nad projektem, odnotujcie ten fakt w specjalnie przygotowanym formularzu — dostępnym [TUTAJ](https://docs.google.com/forms/d/e/1FAIpQLScAFLQ2KHcOhS9mlZd_2ngq46hkXKkFOb8HjiILvMciGM35nw/viewform).
-Powinno to nastąpić najpóźniej o godzinie 23:59 dnia poprzedzającego prezentację projektu (data dostępna w harmonogramie kursu).
-Zgłosić projekt do oceny jest obowiązkiem osoby pełniącej funkcję Development Managera. 
-Powinna ona zadbać, aby do tego czasu wszystko było już dopięte na ostatni guzik.
-- Spotkajcie się w wyznaczonym dniu jeszcze z 2 innymi zespołami i ich mentorami (np. za pomocą Google Meet). 
-W trakcie spotkania każdy zespół prezentuje wykonany projekt. 
-Dlatego zdecydujcie, kto to zrobi z Waszego zespołu. 
-Liczba osób jest dowolna, ale nie powinien tego robić mentor.
-W przygotowanie prezentacji powinni zaangażować się wszyscy uczestnicy.
-Forma prezentacji pozostaje dowolna (musi zmieścić się w 10 minutach + 5 minut na pytania). 
-Filmik, odegranie scenki, prezentacja multimedialna. Dozwolone jest wszystko, co wam przyjdzie na myśl (oczywiście w granicach dobrego smaku).
-Na pewno musi zostać pokazana działająca aplikacja, reszta wg Waszego uznania. 
-Celem prezentacji jest „sprzedanie” (pokazanie, że to, co zrobiliście, spełnia założenia) Waszej aplikacji osobom obecnym na spotkaniu.
-- Po prezentacji mentor Waszego zespołu oceni projekt wg kryteriów opisanych w specjalnym arkuszu — przykład takiego arkusza możecie zobaczyć [TUTAJ](https://docs.google.com/spreadsheets/d/1mjCi-oDXILKoCReqJlhGYP4NW-HVMCzvdcIy6ntnsog/edit?usp=sharing). Na dole wybierzcie zakładkę odpowiedniego projektu, np. "Projekt 2". 
-Dokładnie taką samą ocenę przeprowadzi jeden z mentorów obecnych na spotkaniu — tzw. mentor recenzent.
-Mentor Waszego zespołu dodatkowo określi też, jakie było zaangażowanie każdej osoby w projekt — więc postarajcie się dać z siebie 100 w trakcie pracy!
-Składa się na to między innymi: terminowość, spełnianie funkcji w projekcie, pomoc innym.
-Pamiętajcie też odpowiednio opracować README.md Waszego projektu, tak aby prezentowało kto, co, jak i dlaczego zostało wykonane.
-Zawartość tego pliku możecie przenieść gdzieś indziej albo jedynie zostawić link prowadzący do używanego repozytorium szablonowego. 
-README.md waszego repozytorium powinno być wizytówką aplikacji. Koniecznie musi się w nim znaleźć link do działającego DEMO.
-Dotyczy to tego i wszystkich kolejnych projektów. 
-- Po zrecenzowaniu waszych projektów mentor powinien przekazać każdemu jego ocenę zaangażowania i feedback jako uzasadnienie.
-Ocena projektu jest wspólna dla całego zespołu i jest równa średniej z ocen obu mentorów.
-- Ostateczna punktacja dla uczestnika to procent jego zaangażowania z oceny projektu.
-Pamiętajcie, że ocena nie jest najważniejsza — im więcej pracy wykonacie, tym więcej praktycznych umiejętności opanujecie.
-Zachęcamy mentorów do uzasadniania przydzielonych punktów, tak abyście mogli wyciągnąć z nich, jak najwięcej na przyszłość.
-Mentorzy mają różne doświadczenie zawodowe i będą z pewnością właśnie oceniać projekty przez jego pryzmat. 
-Dzięki zmianom mentorów recenzentów zobaczycie z pewnością różne spojrzenia na podobne kwestie.
-
 
 ## Quiz Gwiezdne Wojny
 Teraz przechodzimy do przykładowego projektu, który został przygotowany przez organizatorów kursu.
@@ -253,6 +215,14 @@ Rozszerzenia, które my proponujemy do wykonania, to:
 To complete your Free Trial signup, you must provide a credit card or other payment method to set up a Cloud Billing account and verify your identity. Don't    worry, setting up a Cloud Billing account does not enable us to charge you. You are not charged unless you explicitly enable billing by upgrading your Cloud Billing account to a paid account. You can upgrade to a paid account at any time during the trial. After you have upgraded, you can still use any remaining credits (within the 90-day period).
  ```
  Tutaj dostępna jest polska instrukcja zakładania konta: https://flyonthecloud.com/pl/blog/konto-gcp-rejestracja-konfiguracja/#Zakladanie_konta_Google_Cloud_Platform
+ 
+## Dev Team:
+- Wojtek Pugowski - Tech Lead
+- Justyna Chmielińska - Development Manager
+- Bartłomiej Pająk - Product Owner
+- Kamil Biskup
+- Weronika Pietrzak
+- Patryk Pierzchała
     
 
 ## Technologie do wykorzystania:
