@@ -1,0 +1,110 @@
+:root{
+    --main-red-color: #cb0e0e;
+    --main-green-color: rgba(0, 255, 0, 0.8);
+    --shadow-color: rgba(235, 235, 195, 0.81)
+}
+
+
+.container {
+    background-image: url(../static/assets/ui/QuizBackground.png);
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.elements {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: 85vh;
+    width: 100%;
+}
+
+.wrapper-lightsaber {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: auto;
+    padding-bottom: 1rem;
+}
+
+
+.lightsaberHandle {
+    width: 18vw;
+    height: auto;
+    margin-left: 5vw;
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+.container-firebrand {
+    position: relative;
+    bottom: -0.12vw;
+    height: 1.9vw;
+    width: 100vw;
+    border-radius: 1vw;
+    background-color: var(--main-green-color);
+    box-shadow: 0 0 1vw var(--shadow-color);
+    margin: 0 5vw 0 -1.42vw;
+}
+
+
+
+.progress-lightsaber {
+    height: 100%;
+}
+
+
+.countdown {
+    font-size: 2vw;
+    color: var(--main-red-color);
+    text-shadow: 0 0 2rem var(--shadow-color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn {
+    position: absolute;
+    bottom: 50vh;
+    right: 50vw;
+    width: 120px;
+    height: 50px;
+    border-radius: .5vw;
+}
+
+#start-animation {
+    animation: progress-lightsaber-animation 10s linear alternate;
+}
+
+@keyframes progress-lightsaber-animation {
+    0% {
+        background-color: var(--main-green-color);
+        width: 100%;
+        box-shadow: 0 0 1vw var(--shadow-color);
+        border-radius: 50px 50px;
+    }
+
+    65% {
+        background-color: var(--main-green-color);
+        width: 35%;
+        box-shadow: 0 0 1rem var(--shadow-color);
+        border-radius: 50px 50px;
+    }
+    70% {
+        background-color: var(--main-red-color);
+        width: 30%;
+        box-shadow: 0 0 1vw var(--shadow-color);
+        border-radius: 50px 50px;
+    }
+    100% {
+        background-color: var(--main-red-color);
+        width: 0;
+        box-shadow: 0 0 1vw var(--shadow-color);
+        border-radius: 50px 50px;
+    }
+
+
+}
