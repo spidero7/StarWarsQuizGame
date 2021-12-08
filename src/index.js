@@ -11,3 +11,13 @@ window.onload = () =>
   App({
     options: { swApiBaseUrl: SW_API_BASE_URL, quizMaxTime: QUIZ_MAX_TIME },
   });
+
+// const getData = async () => {
+//   const response = await fetch('/public/data.json');
+
+//   const data = await response.json();
+//   return data;
+// };
+
+// getData().then((data) => console.log('resolved', data));
+// //   .catch((error) => console.log('rejected', error.message));
