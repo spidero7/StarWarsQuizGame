@@ -7,6 +7,12 @@ Wykorzystanie asynchronicznego JavaScript oraz korzystanie z REST API.
 ![Star Wars Quiz - Ekrany](./.github/images/StarWarsQuizEkrany.png)
 Proponowany projekt — Quiz Star Wars (opis poniżej).
 
+### Strategia Rozgałęziania
+"Strategia rozgałęziania" odnosi się do strategii stosowanej przez zespół programistów podczas pisania, łączenia i dostarczania kodu w kontekście systemu kontroli wersji, takiego jak Git. Twórcy oprogramowania pracujący jako zespół na tej samej bazie kodu muszą udostępniać sobie nawzajem swoje zmiany. Ale jak mogą to zrobić skutecznie, jednocześnie unikając wadliwego działania? Celem każdej strategii rozgałęziania jest rozwiązanie tego problemu i umożliwienie zespołom wspólnej pracy nad tym samym kodem źródłowym bez wzajemnego deptania. Strategia rozgałęzień określa, w jaki sposób zespół wykorzystuje gałęzie do osiągnięcia tego poziomu równoczesnego rozwoju.
+
+Zapoznaj się z naszą strategią rozgałęziania [tutaj](branching.md).
+
+
 ### Zasady wykonywania projektu (wspólne dla wszystkich grup i mentorów): 
 
 ##### W projekcie każdy z uczestników powinien zaprezentować praktyczną znajomość poniższych zagadnień związanych z JavaScript:
