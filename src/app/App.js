@@ -2,7 +2,7 @@ import { doc } from 'prettier';
 
 export const App = ({ options }) => {};
 
-// target html div
+// Getting elements
 const hallOfFameContainer = document.querySelector(
   '.swquiz-app-hall-of-fame-container',
 );
@@ -19,6 +19,9 @@ window.localStorage.setItem('user', JSON.stringify(usersScores));
 
 // Data from Local Storage
 const userData = JSON.parse(window.localStorage.getItem('user'));
+
+// console.log(userData);
+const scores = userData.map((x) => x.score);
 
 console.log(userData);
 
@@ -41,7 +44,19 @@ function showHallOfFame() {
   for (let i = 0; i < usersScores.length; i++) {
     const hallOfFamePlayerDiv = document.createElement('div');
     hallOfFamePlayerDiv.classList.add('swquiz-app-hall-of-fame-player');
-    hallOfFamePlayerDiv.innerHTML = `<p>1st</p>
+
+    const highestScore = Math.max(...scores);
+    const lowestScore = Math.min(...scores);
+
+    if (scores[i] === highestScore) {
+      userData[i]['place'] = 1;
+    } else if (scores[i] === lowestScore) {
+      userData[i]['place'] = 3;
+    } else {
+      userData[i]['place'] = 2;
+    }
+
+    hallOfFamePlayerDiv.innerHTML = `<p>${userData[i].place}</p>
         <p>${userData[i].playerName}</p>
         <p>${userData[i].score}</p>`;
     hallOfFameContainer.appendChild(hallOfFamePlayerDiv);
