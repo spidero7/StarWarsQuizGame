@@ -4,12 +4,7 @@ const hallOfFameContainer = document.querySelector(
 );
 
 // Draft data
-const usersScores = [
-  { playerName: 'Luke', score: 18 },
-  { playerName: 'Han', score: 20 },
-  { playerName: 'Vader', score: 10 },
-  { playerName: 'Obi', score: 16 },
-];
+const usersScores = [{ playerName: 'Luke', score: 18 }];
 
 // Scores in order from largest to smallest
 const arrayOfScores = usersScores.map((x) => x.score);
@@ -19,31 +14,16 @@ arrayOfScores.sort(function (a, b) {
 
 console.log(arrayOfScores);
 
-// let threeHighestScores = 2;
-
-// for (let i = 0; i <= threeHighestScores; i++) {
-//   if (arrayOfScores[i] > threeHighestScores) {
-//     let threeHighestScores = arrayOfScores[i];
-//     threeHighestScores.map((x) => x);
-//   }
-//   console.log(threeHighestScores);
-// }
-
-// for (let i = 0; i < 3; i++) {
-//   const threeHighestScores = arrayOfScores[i];
-//   console.log(threeHighestScores);
-// }
-
-// Adding player name and score to Local Storage
-window.localStorage.setItem('user', JSON.stringify(usersScores));
-
-// Getting the data from Local Storage
-const userDataFromLocalStorage = JSON.parse(
-  window.localStorage.getItem('user'),
-);
-
 // Showing Hall of Fame ranking if user've played
 function showHallOfFame() {
+  // Adding player name and score to Local Storage
+  window.localStorage.setItem('user', JSON.stringify(usersScores));
+
+  // Getting the data from Local Storage
+  const userDataFromLocalStorage = JSON.parse(
+    window.localStorage.getItem('user'),
+  );
+
   const headerRanking = document.createElement('h2');
   headerRanking.innerHTML = 'Ranking';
   headerRanking.classList.add('swquiz-app-hall-of-fame-ranking-header');
