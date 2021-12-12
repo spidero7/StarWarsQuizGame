@@ -31,6 +31,10 @@ body {
   grid-column: span 2;
 }
 
+#swquiz-app-hall-of-fame-button {
+  margin-right: 50px;
+}
+
 #swquiz-app-hall-of-fame-button,
 #swquiz-app-play-the-game-button {
   padding: 1rem 2rem;
