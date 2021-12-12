@@ -2,12 +2,29 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+/* Logo Star Wars wyświetlane w lewym górym rogu */
+.swlogo {
+    width: 20vw;
+    height: 10vh;
+    padding: 2vh 2vw;
+}
+
+#logo {
+    width: 100%;
+}
 
 /* Obrazek dotyczący pytania wyświetlany po lewej stronie */
 div.left-picture {
-    width: 225px;
-    height: auto;
+    width: 20vw;
+    height: 40vh;
     float: left;
+    padding: 4vh 2vw;
 }
 
 #left-pic {
