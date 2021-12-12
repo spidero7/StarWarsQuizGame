@@ -1,34 +1,33 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+  display: grid;
 }
 
 /* Logo Star Wars wyświetlane w lewym górym rogu */
 .swlogo {
-    width: 20vw;
-    height: 10vh;
-    padding: 2vh 2vw;
+  width: 20vw;
+  height: 10vh;
+  padding: 2vh 2vw;
 }
 
 #logo {
-    width: 100%;
+  width: 100%;
 }
 
 /* Obrazek dotyczący pytania wyświetlany po lewej stronie */
 div.left-picture {
-    width: 20vw;
-    height: 40vh;
-    float: left;
-    padding: 4vh 2vw;
+  width: 20vw;
+  height: 40vh;
+  float: left;
+  padding: 4vh 2vw;
 }
 
 #left-pic {
-    width: 100%;
-    border-radius: 5%;
-    box-shadow: 0 4px 8px 0 rgba(199, 12, 12, 0.575), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
+  border-radius: 5%;
+  box-shadow: 0 4px 8px 0 rgba(199, 12, 12, 0.575),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
