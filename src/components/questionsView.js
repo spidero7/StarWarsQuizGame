@@ -10,7 +10,7 @@ const questionsTemplate = `
     </div>    
 `
 
-export default questionsView = async (parentElement, gameMode) => {
+const questionsView = async (parentElement, gameMode) => {
 
     // Handling question data section
 
@@ -115,3 +115,5 @@ export default questionsView = async (parentElement, gameMode) => {
     parentElement.parentNode.replaceChild(template, parentElement)
     
 }
+
+export default questionsView
