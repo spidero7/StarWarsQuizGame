@@ -6,10 +6,8 @@ const hallOfFameContainer = document.querySelector(
 // Draft data
 const usersScores = [
   { playerName: 'Luke', score: 30, answers: 50 },
-  { playerName: 'Luke', score: 18, answers: 80 },
-  { playerName: 'Han', score: 25, answers: 40 },
-  { playerName: 'Han', score: 105, answers: 40 },
-  { playerName: 'Han', score: 145, answers: 40 },
+  { playerName: 'Han', score: 18, answers: 80 },
+  { playerName: 'Leia', score: 18, answers: 100 },
 ];
 
 // console.log(arrayOfScores);
@@ -40,25 +38,15 @@ function showHallOfFame() {
   userDataFromLocalStorage.sort((a, b) =>
     a.score < b.score ? 1 : a.score > b.score ? -1 : 0,
   );
-  console.log(userDataFromLocalStorage);
 
   // Score variable
   const threeHighestScore = userDataFromLocalStorage.slice(0, 3);
-  const scores = threeHighestScore.map((x) => x.score);
-  const highestScore = Math.max(...scores);
-  const thirdScore = Math.min(...scores);
 
   for (let i = 0; i < userDataFromLocalStorage.length; i++) {
     const hallOfFamePlayerDiv = document.createElement('div');
     hallOfFamePlayerDiv.classList.add('swquiz-app-hall-of-fame-player');
 
-    if (scores[i] == highestScore) {
-      userDataFromLocalStorage[i]['place'] = 1;
-    } else if (scores[i] == thirdScore) {
-      userDataFromLocalStorage[i]['place'] = 3;
-    } else {
-      userDataFromLocalStorage[i]['place'] = 2;
-    }
+    userDataFromLocalStorage[i].place = i + 1;
 
     if (threeHighestScore) {
       hallOfFamePlayerDiv.innerHTML = `<p>${threeHighestScore[i].place}</p>
