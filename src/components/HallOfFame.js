@@ -3,18 +3,22 @@ const hallOfFameContainer = document.querySelector('.quiz-game-ranking');
 
 // Draft data
 const usersScores = [
-  { playerName: 'Luke', score: 30, answers: 50, mode: 'people' },
-  { playerName: 'Han', score: 18, answers: 80, mode: 'vehicles' },
-  { playerName: 'R2D2', score: 18, answers: 80, mode: 'vehicles' },
-  { playerName: 'Leia', score: 18, answers: 100, mode: 'people' },
-  { playerName: 'Yoda', score: 4, answers: 4, mode: 'starship' },
-  { playerName: 'Chewy', score: 15, answers: 16, mode: 'people' },
+  {
+    playerName: 'Luke',
+    score: 30,
+    answers: 50,
+    percentage: 60,
+    mode: 'people',
+  },
+  { playerName: 'Han', score: 20, answers: 80, percentage: 25, mode: 'people' },
+  {
+    playerName: 'R2D2',
+    score: 15,
+    answers: 30,
+    percentage: 50,
+    mode: 'vehicles',
+  },
 ];
-
-usersScores.map((player) => {
-  const percentage = (player.score / player.answers) * 100;
-  player.percentage = percentage;
-});
 
 // Showing Hall of Fame ranking if user've played
 function showHallOfFame() {
