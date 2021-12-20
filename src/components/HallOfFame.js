@@ -8,9 +8,14 @@ const usersScores = [
   { playerName: 'Luke', score: 30, answers: 50 },
   { playerName: 'Han', score: 18, answers: 80 },
   { playerName: 'Leia', score: 18, answers: 100 },
+  { playerName: 'Yoda', score: 4, answers: 4 },
+  { playerName: 'Chewy', score: 15, answers: 16 },
 ];
 
-// console.log(arrayOfScores);
+usersScores.map((player) => {
+  const percentage = (player.score / player.answers) * 100;
+  player.percentage = percentage;
+});
 
 // Showing Hall of Fame ranking if user've played
 function showHallOfFame() {
@@ -34,9 +39,9 @@ function showHallOfFame() {
 
   hallOfFameContainer.appendChild(hallOfFameHeaderDiv);
 
-  // Sort by score
+  // Sort by percentage
   userDataFromLocalStorage.sort((a, b) =>
-    a.score < b.score ? 1 : a.score > b.score ? -1 : 0,
+    a.percentage < b.percentage ? 1 : a.percentage > b.percentage ? -1 : 0,
   );
 
   // Score variable
