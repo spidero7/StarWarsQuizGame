@@ -1,4 +1,4 @@
-import Questions from "./Questions"
+import Questions from "./Questions.js"
 
 const questionsTemplate = `
     <div class="questions-question">Question: loading...</div>

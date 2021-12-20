@@ -1,4 +1,4 @@
-import questionsView from "../components/questionsView.js"
+import QuestionsView from "../components/QuestionsView.js"
 
 export const App = ({options}) => {
     // window.askedIds = [] // for debuging
@@ -7,5 +7,5 @@ export const App = ({options}) => {
     window.usedQuestionIds = [] // after finished game, this global should be set to empty array + it is used for storing used questions info
     window.precachedQuestions = [] // after finished game, this global should be set to empty array + it is used for precaching questions
     window.cachedQuestionsPromises = [] // after finished game, this global should be set to empty array + it is used for limiting the amount of fetches
-    questionsView(document.querySelector('.quiz-game-questions'), "starships", true)
+    QuestionsView(document.querySelector('.quiz-game-questions'), "starships", true)
 }
