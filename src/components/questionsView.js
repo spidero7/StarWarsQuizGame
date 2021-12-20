@@ -1,18 +1,16 @@
-import questions from "./questions"
+import Questions from "./Questions"
 
 const questionsTemplate = `
     <div class="questions-question">Question: loading...</div>
     <div class="questions-answers">
-        <div class="questions-answer question-answer-block">Loading...</div>
-        <div class="questions-answer question-answer-block">Loading...</div>
-        <div class="questions-answer question-answer-block">Loading...</div>
-        <div class="questions-answer question-answer-block">Loading...</div>
+        <div class="questions-answer question-answer-block">loading...</div>
+        <div class="questions-answer question-answer-block">loading...</div>
+        <div class="questions-answer question-answer-block">loading...</div>
+        <div class="questions-answer question-answer-block">loading...</div>
     </div>    
 `
 
-const questionsView = async (parentElement, gameMode) => {
-
-    // Handling question data section
+const QuestionsView = async (parentElement, gameMode, shouldRender) => {
 
     const updateAnswers = (answers, gameMode) => {
 
@@ -48,27 +46,11 @@ const questionsView = async (parentElement, gameMode) => {
         })
     }
 
-    // Template
-
-    let template = document.createElement('div')
-    
-    template.classList.add("questions-container")
-    
-    try {
-        if(document.querySelector('.questions-container').getAttribute("not-rendered") == "true") {
-            template.innerHTML = questionsTemplate.trim()
-        } else {
-            template = document.querySelector('.questions-container')
-        }
-    } catch (e) {
-        console.error("error")
-    }
-
-    // Handling answer click section
-
     const handleAnswerClick = (e) => {
+        window.currentPoints.askedQuestions += 1
         if(e.target.getAttribute("correct")) {
             e.target.classList.add("question-correct")
+            window.currentPoints.points += 1
         } else {
             e.target.classList.add("question-incorrect")
         }
@@ -77,11 +59,27 @@ const questionsView = async (parentElement, gameMode) => {
             a.removeEventListener('click', handleAnswerClick)
         })
         const switchQuestions = setTimeout((e) => {
-            questionsView(document.querySelector('.questions-container'), gameMode)
+            QuestionsView(document.querySelector('.quiz-game-questions'), gameMode)
         }, 1000)   
     }
 
-    // Logic
+    let template = document.createElement('div')
+    
+    template.classList.add("quiz-game-questions")
+
+    if(shouldRender==true) {
+        template.setAttribute("data-active-view", "")
+    }
+    
+    try {
+        if(parentElement.hasAttribute("data-not-rendered")) {
+            template.innerHTML = questionsTemplate.trim()
+        } else {
+            template = parentElement
+        }
+    } catch (e) {
+        console.error("Error: Couldn't get the template.")
+    }
     
     let templateAnswers = Array.from(template.lastElementChild.children)
     
@@ -90,12 +88,12 @@ const questionsView = async (parentElement, gameMode) => {
         let answers
 
         if(window.precachedQuestions.length == 0) {
-            answers = questions(gameMode)
+            answers = Questions(gameMode)
         } else {
             answers = window.precachedQuestions
         }
 
-        window.precachedQuestions = questions(gameMode)
+        window.precachedQuestions = Questions(gameMode)
 
         // Cahing-end
 
@@ -104,6 +102,10 @@ const questionsView = async (parentElement, gameMode) => {
     Promise.all(allAnswers).then(res => {
         updateAnswers(res, gameMode)
         let answers = document.querySelector('.questions-answers');
+
+        window.currentQuestion.id = res[0].url.split("/")[5]*1
+        window.currentQuestion.mode = gameMode
+
         for (var i = answers.children.length; i >= 0; i--) {
             answers.appendChild(answers.children[Math.random() * i | 0]);
         }
@@ -112,8 +114,9 @@ const questionsView = async (parentElement, gameMode) => {
         })
     })
     
+    parentElement.removeAttribute("data-not-rendered")
     parentElement.parentNode.replaceChild(template, parentElement)
     
 }
 
-export default questionsView
+export default QuestionsView
