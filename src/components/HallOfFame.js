@@ -1,7 +1,5 @@
 // Getting elements
-const hallOfFameContainer = document.querySelector(
-  '.swquiz-app-hall-of-fame-container',
-);
+const hallOfFameContainer = document.querySelector('.quiz-game-ranking');
 
 // Draft data
 const usersScores = [

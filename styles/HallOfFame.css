@@ -4,7 +4,7 @@ body {
   background-image: url('../static/assets/ui/QuizBackground.png');
 }
 
-.swquiz-app-hall-of-fame-container {
+.quiz-game-ranking {
   padding: 2rem;
   width: 50vw;
   grid-column: span 2;
@@ -12,7 +12,7 @@ body {
 
 #swquiz-app-hall-of-fame-button,
 #swquiz-app-play-the-game-button,
-.swquiz-app-hall-of-fame-container {
+.quiz-game-ranking {
   background-color: #fff;
   margin-top: 2rem;
   border-radius: 16px;
