@@ -3,8 +3,8 @@ import 'regenerator-runtime/runtime' //async/await with Parcel
 import {progressSword} from "./app/wp-lightsaber";
 import { countDown } from "./app/wp-countdown";
 
-document.querySelector('.btn').addEventListener('click', progressSword)
-document.querySelector('.btn').addEventListener('click', countDown)
+document.querySelector('.progress-bar__btn').addEventListener('click', progressSword)
+document.querySelector('.progress-bar__btn').addEventListener('click', countDown)
 
 // const ONE_SECOND_MILLIS = 1000;
 // const SW_API_BASE_URL = process.env.SW_API_BASE_URL || "https://swapi.dev/api";

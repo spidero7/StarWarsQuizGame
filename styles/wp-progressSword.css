@@ -1,23 +1,23 @@
 :root{
     --main-red-color: #cb0e0e;
     --main-green-color: rgba(0, 255, 0, 0.8);
-    --shadow-color: rgba(235, 235, 195, 0.81)
+    --shadow-color: rgba(251, 251, 248, 0.8);
+    --shadow-color2: rgb(136, 134, 134)
 }
 
 
-.container {
-    background-image: url(../static/assets/ui/QuizBackground.png);
-    min-height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+/*.container-progress-bar {*/
+/*    background-image: url(../static/assets/ui/QuizBackground.png);*/
+/*    min-height: 100vh;*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*}*/
 
 .elements {
     display: flex;
     justify-content: center;
     flex-direction: column;
     position: relative;
-    top: 85vh;
     width: 100%;
 }
 
@@ -57,26 +57,26 @@
 }
 
 
-.countdown {
+.progress-bar__countdown {
     font-size: 2vw;
     color: var(--main-red-color);
-    text-shadow: 0 0 2rem var(--shadow-color);
+    text-shadow: var(--shadow-color2) 0 0 10px;;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     text-align: center;
 }
 
-.btn {
-    position: absolute;
-    bottom: 50vh;
-    right: 50vw;
-    width: 120px;
-    height: 50px;
-    border-radius: .5vw;
+.progress-bar__btn {
+    /*position: absolute;*/
+    /*bottom: 50vh;*/
+    /*right: 50vw;*/
+    /*width: 120px;*/
+    /*height: 50px;*/
+    /*border-radius: .5vw;*/
 }
 
 #start-animation {
-    animation: progress-lightsaber-animation 10s linear alternate;
+    animation: progress-lightsaber-animation 120s linear alternate;
 }
 
 @keyframes progress-lightsaber-animation {
@@ -105,6 +105,4 @@
         box-shadow: 0 0 1vw var(--shadow-color);
         border-radius: 50px 50px;
     }
-
-
 }

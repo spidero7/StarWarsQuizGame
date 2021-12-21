@@ -1,5 +1,5 @@
-let counterSecond = 10;
-const time = document.querySelector('.countdown')
+let counterSecond = 120;
+const time = document.querySelector('.progress-bar__countdown')
 
 export const countDown = e => {
   e.preventDefault();
@@ -17,7 +17,7 @@ function displayTime(second) {
   const min = Math.floor(second / 60);
   const sec = Math.floor(second % 60);
   time.innerHTML = `Time left
-  ${min < 10 ? "0" + min : min}:${sec < 10 ? "0" + sec : sec} seconds!
+  ${min < 10 ? "0" + min : min}:${sec < 10 ? "0" + sec : sec} minutes!
   `;
 }
 
