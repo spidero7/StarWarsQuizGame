@@ -13,7 +13,7 @@
     />
   </head>
   <body>
-    <div id="swquiz-app" class="quiz-container">
+    <div id="quiz-app" class="quiz-container">
       <div class="quiz-logo">
         <img src="./static/assets/ui/StarWarsLogo.png" alt="Star-Wars" />
       </div>
@@ -25,21 +25,19 @@
         <div class="quiz-game-ranking">ranking</div>
       </div>
       <div class="quiz-progress">
-        <div class="elements">
-          <div class="wrapper-lightsaber">
+          <div class="quiz-progress-lightsaber">
             <img
               src="./static/assets/ui/LightsaberHandle.png"
-              alt="LightsaberHandle"
-              class="lightsaberHandle"
+              alt="Lightsaber Handle"
+              class="quiz-progress-lightsaber__handle"
             />
-            <div class="container-firebrand">
-              <div class="progress-lightsaber"></div>
+            <div class="quiz-progress-lightsaber__firebrand">
+              <div class="quiz-progress-lightsaber__animation"></div>
             </div>
           </div>
-          <div class="progress-bar__countdown">Time left 02:00 minutes!</div>
-          <button class="progress-bar__btn">Start</button>
+          <div class="quiz-progress-countdown">Time left 02:00 minutes!</div>
+          <button class="quiz-progress-btn">Start</button>
         </div>
-      </div>
     </div>
     <script src="src/index.js"></script>
   </body>

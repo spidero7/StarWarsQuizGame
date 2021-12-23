@@ -1,5 +1,5 @@
 let counterSecond = 120;
-const time = document.querySelector('.progress-bar__countdown')
+const time = document.querySelector('.quiz-progress-countdown')
 
 export const countDown = e => {
   e.preventDefault();
