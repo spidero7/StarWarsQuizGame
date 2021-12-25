@@ -12,14 +12,19 @@
 </head>
 <body>
 
-<div id="swquiz-app">
-    <nav class="box menu red">
+<div id="swquiz-app" class="quiz-container">
+    <div class="quiz-logo">
+        <img src="./static/assets/ui/StarWarsLogo.png" alt="Star-Wars">
+    </div>
+    <div class="quiz-menu box menu red">
         <button class="navbtn people">People</button>
         <button class="navbtn vehicles">Vehicles</button>
         <button class="navbtn starships">Starships</button>
-    </nav>
-    <section> 
-        <div class="box title red">
+    </div>
+    <div class="quiz-image">image</div>
+    <div class="quiz-game">
+        <div class="quiz-game-selection">
+            <div class="box title red">
                 MODE: Who is this character?
         </div>
         <div class="box">
@@ -28,8 +33,11 @@
                 You have one minute (1m) to answer as many questions as possible. During the game you need to choose from available options which character from Star Wars is shown on the left.
             </div>
         </div>
-    </section>
-
+        </div>
+        <div data-active-view class="quiz-game-questions">questions</div>
+        <div class="quiz-game-ranking">ranking</div>
+    </div>
+    <div class="quiz-progress">progress bar</div>
 </div>
 
 <script src="src/index.js"></script>
