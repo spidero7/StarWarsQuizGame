@@ -1,5 +1,5 @@
 import 'regenerator-runtime/runtime' //async/await with Parcel
-
+import { App } from "./app/App"
 import { progressSword } from "./app/wp-lightsaber";
 import { countDown } from "./app/wp-countdown";
 
@@ -9,4 +9,4 @@ const QUIZ_MAX_TIME = process.env.QUIZ_MAX_TIME_SECONDS ? process.env.QUIZ_MAX_T
 
 document.querySelector('.quiz-progress-btn').addEventListener('click', progressSword)
 document.querySelector('.quiz-progress-btn').addEventListener('click', countDown)
-window.onload = () => App({ options: { swApiBaseUrl: SW_API_BASE_URL, quizMaxTime: QUIZ_MAX_TIME } })
+window.onload = () => App({ options: { swApiBaseUrl: SW_API_BASE_URL, quizMaxTime: QUIZ_MAX_TIME } });

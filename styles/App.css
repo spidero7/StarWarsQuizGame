@@ -37,7 +37,6 @@ body {
 } */
 
 .quiz-logo {
-  display: grid;
   align-items: center;
   justify-items: center;
 }
@@ -48,3 +47,4 @@ body {
 }
 
 @import url(./questions.css);
+@import url(./images.css);
