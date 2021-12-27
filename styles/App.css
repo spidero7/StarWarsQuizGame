@@ -1,3 +1,6 @@
+@import './wp-progressSword.css';
+@import './modern-normalize.css';
+
 * {
   box-sizing: border-box;
 }
@@ -7,6 +10,7 @@ body {
   margin: 0;
   background-image: url(../static/assets/ui/QuizBackground.png);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .quiz-container {
