@@ -1,26 +1,7 @@
-.images-container {
-  display: flex;
-  flex-direction: column;
-  gap: 5vh;
-}
-
-/* Logo Star Wars wyświetlane w lewym górym rogu */
-.swlogo {
-  width: 20vw;
-  height: 10vh;
-  padding: 2vh 2vw;
-}
-
-#logo {
-  width: 100%;
-}
-
 /* Obrazek dotyczący pytania wyświetlany po lewej stronie */
-div.left-picture {
+.quiz-image {
   width: 20vw;
   height: 40vh;
-  float: left;
-  padding: 4vh 2vw;
 }
 
 #left-pic {
