@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>CodersCamp2020 | Star Wars API QUIZ</title>
-    <link rel="stylesheet" href="styles/App.css"/>
-    <link rel="stylesheet" href="styles/images.css"/>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-          rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>CodersCamp2021 | Star Wars API QUIZ | JoaoTeam</title>
+  <link rel="stylesheet" href="styles/App.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
 </head>
+
 <body>
-
-<div id="swquiz-app">
-
-        <div class="quiz-image">
-            <img id="left-pic" src="" alt="Obrazek powiązany z pytaniem">
+  <div id="quiz-app" class="quiz-container">
+    <div class="quiz-logo">
+      <img src="./static/assets/ui/StarWarsLogo.png" alt="Star-Wars" />
+    </div>
+    <div class="quiz-menu">menu</div>
+    <div class="quiz-image">
+      <img id="left-pic" src="" alt="Obrazek powiązany z pytaniem">
+    </div>
+    <div class="quiz-game">
+      <div class="quiz-game-selection">selection</div>
+      <div data-active-view data-not-rendered class="quiz-game-questions">questions</div>
+      <div class="quiz-game-ranking">ranking</div>
+    </div>
+    <div class="quiz-progress">
+      <div class="quiz-progress-lightsaber">
+        <img src="./static/assets/ui/LightsaberHandle.png" alt="Lightsaber Handle"
+          class="quiz-progress-lightsaber__handle" />
+        <div class="quiz-progress-lightsaber__firebrand">
+          <div class="quiz-progress-lightsaber__animation"></div>
         </div>
-   
-</div>
+      </div>
+      <div class="quiz-progress-countdown">Time left 02:00 minutes!</div>
+      <button class="quiz-progress-btn">Start</button>
+    </div>
+  </div>
+  <div class="quiz-progress">progress bar</div>
+  </div>
 
-<script src="src/index.js"></script>
+  <script src="src/index.js" type="module"></script>
 </body>
+
 </html>
