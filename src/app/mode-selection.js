@@ -1,9 +1,9 @@
 const description = document.querySelector('.description');
 const title = document.querySelector('.title');
 
-document.querySelector('.menu').addEventListener('click', selectMode); 
+document.querySelector('.quiz-menu').addEventListener('click', selectMode); 
 
-function selectMode(event) {
+export function selectMode(event) {
     if (event.target.innerText === 'People') {
         title.innerText = gameMode.people.title;
         description.innerText = gameMode.people.description;
@@ -28,5 +28,3 @@ const gameMode = {
         title: 'MODE: Which starship is this?',
         description: 'You have one minute (1m) to answer as many questions as possible. During the game you need to choose from available options which starship from Star Wars is shown on the left.'}
 }
-
-export default selectMode;
