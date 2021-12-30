@@ -1,4 +1,7 @@
 @import url('./selectmode.css');
+@import './wp-progressSword.css';
+@import './modern-normalize.css';
+@import './HallOfFame.css';
 
 * {
   box-sizing: border-box;
@@ -9,6 +12,7 @@ body {
   margin: 0;
   background-image: url(../static/assets/ui/QuizBackground.png);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .quiz-container {
@@ -44,3 +48,5 @@ body {
   max-width: 100%;
   max-height: 100%;
 }
+
+@import url(./questions.css);
