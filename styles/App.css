@@ -1,5 +1,6 @@
 @import './wp-progressSword.css';
 @import './modern-normalize.css';
+@import './HallOfFame.css';
 
 * {
   box-sizing: border-box;
