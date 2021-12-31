@@ -4,4 +4,8 @@ dist
 .parcel-cache
 node_modules
 coverage
+<<<<<<< HEAD
+.DS_STORE
+=======
 progressSword.html
+>>>>>>> 0ad5a2b66ec4e6bce1b0d3697fcb35ff52e08f69
