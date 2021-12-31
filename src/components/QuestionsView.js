@@ -80,7 +80,7 @@ const QuestionsView = async (parentElement, gameMode, shouldRender) => {
     } catch (e) {
         console.error("Error: Couldn't get the template.")
     }
-
+    console.log(template.lastElementChild)
     let templateAnswers = Array.from(template.lastElementChild.children)
 
     // Caching
