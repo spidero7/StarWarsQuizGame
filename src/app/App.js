@@ -1,3 +1,4 @@
+import { selectMode } from "./mode-selection.js"
 import { leftPicture } from '../components/images'
 import QuestionsView from "../components/QuestionsView.js"
 export const App = ({ options }) => {

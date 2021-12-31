@@ -57,8 +57,7 @@ function showHallOfFame() {
               <p>Scores</p>`;
 
   hallOfFameContainer.appendChild(hallOfFameHeaderDiv);
-
-  for (let i = 0; i < userDataFromLocalStorage.length; i++) {
+  for (let i = 0; i < mode.length; i++) {
     if (true) {
       // Sort by percentage
       mode.sort((a, b) =>

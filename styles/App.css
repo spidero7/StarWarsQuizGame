@@ -1,3 +1,4 @@
+@import url('./selectmode.css');
 @import './wp-progressSword.css';
 @import './modern-normalize.css';
 @import './HallOfFame.css';
@@ -28,14 +29,14 @@ body {
   grid-column: span 2;
 }
 
-.quiz-game > div:not([data-active-view]) {
+/* .quiz-game > div:not([data-active-view]) {
   display: none;
-}
+}*/
 
 /* .quiz-container > div {
   border: 2px solid #bbb;
   border-radius: 10px;
-} */
+}*/
 
 .quiz-logo {
   align-items: center;
