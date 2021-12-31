@@ -1,5 +1,5 @@
 import Questions from "./Questions.js"
-
+import { leftPicture } from "./images.js"
 const questionsTemplate = `
     <div class="questions-question">Question: loading...</div>
     <div class="questions-answers">
@@ -15,16 +15,16 @@ const QuestionsView = async (parentElement, gameMode, shouldRender) => {
     const updateAnswers = (answers, gameMode) => {
 
         let gameQuestion = ""
-        switch(gameMode) {
+        switch (gameMode) {
             case "people":
                 gameQuestion = "Who is this character?"
-            break
+                break
             case "vehicles":
                 gameQuestion = "What is this vehicle?"
-            break
+                break
             case "starships":
                 gameQuestion = "What is this starship?"
-            break
+                break
             default:
                 gameQuestion = "N/A"
         }
@@ -35,8 +35,8 @@ const QuestionsView = async (parentElement, gameMode, shouldRender) => {
             e.className = "questions-answer"
             e.removeAttribute("correct")
             e.innerHTML = answers[key].name
-            
-            if(key === 0) {
+
+            if (key === 0) {
                 e.setAttribute("correct", true)
                 e.innerHTML += " ✔️"
             }
@@ -48,7 +48,7 @@ const QuestionsView = async (parentElement, gameMode, shouldRender) => {
 
     const handleAnswerClick = (e) => {
         window.currentPoints.askedQuestions += 1
-        if(e.target.getAttribute("correct")) {
+        if (e.target.getAttribute("correct")) {
             e.target.classList.add("question-correct")
             window.currentPoints.points += 1
         } else {
@@ -60,19 +60,19 @@ const QuestionsView = async (parentElement, gameMode, shouldRender) => {
         })
         const switchQuestions = setTimeout((e) => {
             QuestionsView(document.querySelector('.quiz-game-questions'), gameMode)
-        }, 1000)   
+        }, 1000)
     }
 
     let template = document.createElement('div')
-    
+
     template.classList.add("quiz-game-questions")
 
-    if(shouldRender==true) {
+    if (shouldRender == true) {
         template.setAttribute("data-active-view", "")
     }
-    
+
     try {
-        if(parentElement.hasAttribute("data-not-rendered")) {
+        if (parentElement.hasAttribute("data-not-rendered")) {
             template.innerHTML = questionsTemplate.trim()
         } else {
             template = parentElement
@@ -80,31 +80,33 @@ const QuestionsView = async (parentElement, gameMode, shouldRender) => {
     } catch (e) {
         console.error("Error: Couldn't get the template.")
     }
-    
+    console.log(template.lastElementChild)
     let templateAnswers = Array.from(template.lastElementChild.children)
-    
-        // Caching
-        
-        let answers
 
-        if(window.precachedQuestions.length == 0) {
-            answers = Questions(gameMode)
-        } else {
-            answers = window.precachedQuestions
-        }
+    // Caching
 
-        window.precachedQuestions = Questions(gameMode)
+    let answers
 
-        // Cahing-end
+    if (window.precachedQuestions.length == 0) {
+        answers = Questions(gameMode)
+    } else {
+        answers = window.precachedQuestions
+    }
+
+    window.precachedQuestions = Questions(gameMode)
+
+    // Cahing-end
 
     window.allAnswers = [...answers.incorrect, answers.correct]
-    
+
     Promise.all(allAnswers).then(res => {
         updateAnswers(res, gameMode)
         let answers = document.querySelector('.questions-answers');
 
-        window.currentQuestion.id = res[0].url.split("/")[5]*1
+        window.currentQuestion.id = res[0].url.split("/")[5] * 1
         window.currentQuestion.mode = gameMode
+
+        leftPicture(window.currentQuestion.mode, window.currentQuestion.id)
 
         for (var i = answers.children.length; i >= 0; i--) {
             answers.appendChild(answers.children[Math.random() * i | 0]);
@@ -113,10 +115,10 @@ const QuestionsView = async (parentElement, gameMode, shouldRender) => {
             e.classList.remove("question-answer-block")
         })
     })
-    
+
     parentElement.removeAttribute("data-not-rendered")
     parentElement.parentNode.replaceChild(template, parentElement)
-    
+
 }
 
 export default QuestionsView
