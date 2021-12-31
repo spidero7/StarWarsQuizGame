@@ -1,7 +1,11 @@
-@import url('./selectmode.css');
-@import './wp-progressSword.css';
 @import './modern-normalize.css';
+@import '/styles/HallOfFame.css';
+@import './selectmode.css';
+@import './wp-progressSword.css';
 @import './HallOfFame.css';
+
+@import './questions.css';
+@import './images.css';
 
 * {
   box-sizing: border-box;
@@ -48,5 +52,4 @@ body {
   max-height: 100%;
 }
 
-@import url(./questions.css);
-@import url(./images.css);
+
