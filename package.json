@@ -8,7 +8,7 @@
     "prebuild": "rimraf dist",
     "build": "parcel build index.html --public-url ./",
     "format": "prettier --write \"src/**/*.js\" \"src/**/*.ts\" \"test/**/*.js\" \"test/**/*.ts\"",
-    "start:dev": "parcel -p 8765 watch index.html",
+    "start:dev": "parcel -p 8765 index.html",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
@@ -28,6 +28,7 @@
   "dependencies": {
     "@babel/runtime": "^7.16.3",
     "intellisense": "^0.0.1",
+    "parcel-bundler": "^1.12.5",
     "regenerator-runtime": "^0.13.7",
     "uuid": "^8.3.0"
   },
@@ -46,7 +47,8 @@
     "jest": "^26.4.2",
     "jest-fetch-mock": "^3.0.3",
     "msw": "^0.21.3",
-    "parcel-plugin-static-files-copy": "^2.6.0",
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-static-files-copy": "^2.5.0",
     "prettier": "^2.1.2",
     "rimraf": "^3.0.2"
   },
