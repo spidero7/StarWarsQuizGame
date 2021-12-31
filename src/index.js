@@ -1,9 +1,9 @@
 import 'regenerator-runtime/runtime' //async/await with Parcel
 
 import { App } from "./app/App"
+import { HallOfFame } from './components/HallOfFame';
 import { progressSword } from "./app/wp-lightsaber";
 import { countDown } from "./app/wp-countdown";
-import HallOfFame from './components/HallOfFame';
 
 document
   .querySelector('.quiz-progress-btn')
@@ -13,8 +13,10 @@ document
   .addEventListener('click', countDown);
 
 const ONE_SECOND_MILLIS = 1000;
-const SW_API_BASE_URL = process.env.SW_API_BASE_URL || "https://swapi.dev/api";
-const QUIZ_MAX_TIME = process.env.QUIZ_MAX_TIME_SECONDS ? process.env.QUIZ_MAX_TIME_SECONDS * ONE_SECOND_MILLIS : 120 * ONE_SECOND_MILLIS;
+const SW_API_BASE_URL = process.env.SW_API_BASE_URL || 'https://swapi.dev/api';
+const QUIZ_MAX_TIME = process.env.QUIZ_MAX_TIME_SECONDS
+  ? process.env.QUIZ_MAX_TIME_SECONDS * ONE_SECOND_MILLIS
+  : 120 * ONE_SECOND_MILLIS;
 
 document.querySelector('.quiz-progress-btn').addEventListener('click', progressSword)
 document.querySelector('.quiz-progress-btn').addEventListener('click', countDown)
