@@ -1,14 +1,14 @@
-let counterSecond = 120;
 const time = document.querySelector('.quiz-progress-countdown')
 
 export const countDown = e => {
+  let counterSecond = 120;
   e.preventDefault();
-  setInterval(() => {
+  const countDownInterval = setInterval(() => {
     counterSecond--;
     displayTime(counterSecond);
     if (counterSecond <= 0) {
-      endCount();
-      clearInterval(countDown);
+      // endCount();
+      clearInterval(countDownInterval);
     }
   }, 1000);
 }
@@ -16,11 +16,11 @@ export const countDown = e => {
 function displayTime(second) {
   const min = Math.floor(second / 60);
   const sec = Math.floor(second % 60);
-  time.innerHTML = `Time left
-  ${min < 10 ? "0" + min : min}:${sec < 10 ? "0" + sec : sec} minutes!
+  time.innerHTML = `Time left: 
+  ${min < 10 ? "" + min : min}:${sec < 10 ? "0" + sec : sec}!
   `;
 }
 
-function endCount() {
-  time.innerText = "Say hello to Sarlacc ☠️";
-}
+// function endCount() {
+//   time.innerText = "Say hello to Sarlacc ☠️";
+// }
