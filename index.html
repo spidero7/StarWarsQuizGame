@@ -25,42 +25,22 @@
       <img id="left-pic" src="" alt="Obrazek powiązany z pytaniem">
     </div>
     <div class="quiz-game">
-        <div class="quiz-game-selection">
-            <div class="box title red">
-                MODE: Who is this character?
+    </div>
+    <div class="quiz-progress">
+      <div class="quiz-progress-lightsaber">
+        <img
+          src="./static/assets/ui/LightsaberHandle.png"
+          alt="Lightsaber Handle"
+          class="quiz-progress-lightsaber__handle"
+        />
+        <div class="quiz-progress-lightsaber__firebrand">
+          <div class="quiz-progress-lightsaber__animation"></div>
         </div>
-        <div class="box">
-            <div class="mode-rules">Mode Rules</div>
-            <div class="description">
-                You have one minute (1m) to answer as many questions as possible. During the game you need to choose from available options which character from Star Wars is shown on the left.
-            </div>
-        </div>
-        </div>
-        <div data-active-view class="quiz-game-questions">
-          <div class="questions-question">Question</div>
-          <div class="questions-answers">
-              <div class="questions-answer question-answer-block">Answer 1</div>
-              <div class="questions-answer question-answer-block">Answer 2</div>
-              <div class="questions-answer question-answer-block">Answer 3</div>
-              <div class="questions-answer question-answer-block">Answer 4</div>
-          </div> 
-        </div>
-        <div class="quiz-game-ranking">ranking</div>
       </div>
-      <div class="quiz-progress">
-          <div class="quiz-progress-lightsaber">
-            <img
-              src="./static/assets/ui/LightsaberHandle.png"
-              alt="Lightsaber Handle"
-              class="quiz-progress-lightsaber__handle"
-            />
-            <div class="quiz-progress-lightsaber__firebrand">
-              <div class="quiz-progress-lightsaber__animation"></div>
-            </div>
-          </div>
-          <div class="quiz-progress-countdown">Time left 02:00 minutes!</div>
-          <button class="quiz-progress-btn">Start</button>
-        </div>
+      <div class="quiz-progress-countdown">Time left 02:00 minutes!</div>
+    </div>
+  </div>
+
   <script src="src/index.js" type="module"></script>
 </body>
 

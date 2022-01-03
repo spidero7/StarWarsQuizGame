@@ -1,5 +1,9 @@
 import Questions from "./Questions.js"
+import GameButtonsView from "./GameButtonsView"
 import { leftPicture } from "./images.js"
+import { progressSword } from "../app/wp-lightsaber";
+import { countDown } from "../app/wp-countdown";
+
 const questionsTemplate = `
     <div class="questions-question">Question: loading...</div>
     <div class="questions-answers">
@@ -10,7 +14,17 @@ const questionsTemplate = `
     </div>    
 `
 
-const QuestionsView = async (parentElement, gameMode, shouldRender) => {
+const QuestionsView = async (gameMode) => {
+
+    GameButtonsView("game")
+
+    const parentElement = document.querySelector('.quiz-game')
+    parentElement.innerHTML = ""
+
+    const template = document.createElement('div')
+    template.classList.add("quiz-game")
+    template.innerHTML = questionsTemplate.trim()
+    template.setAttribute("data-quiz-game-started", "")
 
     const updateAnswers = (answers, gameMode) => {
 
@@ -38,7 +52,7 @@ const QuestionsView = async (parentElement, gameMode, shouldRender) => {
 
             if (key === 0) {
                 e.setAttribute("correct", true)
-                e.innerHTML += " ✔️"
+                e.innerHTML += " ✔️" // comment this in prod env; 
             }
 
             e.classList.remove("question-answer-block")
@@ -59,28 +73,25 @@ const QuestionsView = async (parentElement, gameMode, shouldRender) => {
             a.removeEventListener('click', handleAnswerClick)
         })
         const switchQuestions = setTimeout((e) => {
-            QuestionsView(document.querySelector('.quiz-game-questions'), gameMode)
+            QuestionsView(gameMode)
         }, 1000)
     }
 
-    let template = document.createElement('div')
-
-    template.classList.add("quiz-game-questions")
-
-    if (shouldRender == true) {
-        template.setAttribute("data-active-view", "")
+    const finishGame = () => {
+        window.prompt(`Game finished. Your points: ${window.currentPoints.points} / ${window.currentPoints.askedQuestions}. Enter your name:`)
+        document.querySelector(".quiz-game").removeAttribute("data-quiz-game-started")
+        document.querySelector(".quiz-game").innerHTML = ""
+        // TODO: Zrobić modal króry będzie przekazywał dane dla hall of fame.
+        // TODO: Umieścić w tym miejscu funkcje renderującą rules lub hall of fame.
+        GameButtonsView("rules") 
+        window.currentPoints = { points: 0, askedQuestions: 0 }
+        window.currentQuestion = { mode: "people", id: 36 }
+        window.usedQuestionIds = []
+        window.precachedQuestions = []
+        window.cachedQuestionsPromises = []
+        leftPicture(window.currentQuestion.mode, window.currentQuestion.id)
     }
 
-    try {
-        if (parentElement.hasAttribute("data-not-rendered")) {
-            template.innerHTML = questionsTemplate.trim()
-        } else {
-            template = parentElement
-        }
-    } catch (e) {
-        console.error("Error: Couldn't get the template.")
-    }
-    console.log(template.lastElementChild)
     let templateAnswers = Array.from(template.lastElementChild.children)
 
     // Caching
@@ -106,14 +117,19 @@ const QuestionsView = async (parentElement, gameMode, shouldRender) => {
         window.currentQuestion.id = res[0].url.split("/")[5] * 1
         window.currentQuestion.mode = gameMode
 
-        leftPicture(window.currentQuestion.mode, window.currentQuestion.id)
-
         for (var i = answers.children.length; i >= 0; i--) {
             answers.appendChild(answers.children[Math.random() * i | 0]);
         }
         templateAnswers.forEach(e => {
             e.classList.remove("question-answer-block")
         })
+
+        leftPicture(window.currentQuestion.mode, window.currentQuestion.id)
+        if(parentElement.getAttribute("data-quiz-game-started") != "") {
+            window.setTimeout(finishGame, 120*1000 + 2000)
+            progressSword()
+            countDown(new Event('submit'))
+        }
     })
 
     parentElement.removeAttribute("data-not-rendered")
