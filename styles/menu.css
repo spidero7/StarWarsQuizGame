@@ -1,0 +1,17 @@
+.quiz-menu {
+  display: flex;
+  justify-content: space-around;
+  height: 60%;
+  margin: auto 0px;
+  background-color: white;
+  border-radius: 2vh;
+  box-shadow: 0vh 0vh 2vh 0.4vh red;
+}
+
+.quiz-menu > button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 3vh;
+  font-weight: 600;
+}
