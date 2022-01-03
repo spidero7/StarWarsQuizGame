@@ -128,7 +128,7 @@ const QuestionsView = async (gameMode) => {
         leftPicture(window.currentQuestion.mode, window.currentQuestion.id)
         if(parentElement.getAttribute("data-quiz-game-started") != "") {
             console.log("Started timeout.")
-            window.setTimeout(finishGame, 120*1000 + 2000)
+            window.setTimeout(finishGame, 60*1000 + 2000)
             progressSword()
             countDown(new Event('submit'))
         }

@@ -1,7 +1,7 @@
 const time = document.querySelector('.quiz-progress-countdown')
 
 export const countDown = e => {
-  let counterSecond = 120;
+  let counterSecond = 60;
   e.preventDefault();
   const countDownInterval = setInterval(() => {
     counterSecond--;

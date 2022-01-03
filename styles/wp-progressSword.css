@@ -111,7 +111,7 @@
 .start-animation {
   animation-name: lightsabre;
   -moz-animation-name: lightsabre;
-  animation-duration: 121s;
+  animation-duration: 61s;
   animation-timing-function: linear;
   -moz-animation-timing-function: linear;
 }
