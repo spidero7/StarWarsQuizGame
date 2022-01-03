@@ -3,7 +3,7 @@
 @import './selectmode.css';
 @import './wp-progressSword.css';
 @import './HallOfFame.css';
-
+@import './menu.css';
 @import './questions.css';
 @import './images.css';
 
@@ -51,5 +51,3 @@ body {
   max-width: 100%;
   max-height: 100%;
 }
-
-
