@@ -2,6 +2,7 @@ import { doc } from 'prettier';
 import { selectMode } from "./mode-selection.js"
 import { leftPicture } from '../components/images'
 import GameButtonsView from "../components/GameButtonsView"
+import ModeSelectionView from '../components/ModeSelectionView.js';
 export const App = ({ options }) => {
     // window.askedIds = [] // for debuging
     window.currentPoints = { points: 0, askedQuestions: 0 }
@@ -12,4 +13,5 @@ export const App = ({ options }) => {
     window.chosenGameMode = "people" // TODO: should update after chosing different gamemodes
     GameButtonsView("rules")
     leftPicture(window.currentQuestion.mode, window.currentQuestion.id)
+    ModeSelectionView('people');
 }

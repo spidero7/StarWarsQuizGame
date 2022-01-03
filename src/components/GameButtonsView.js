@@ -1,4 +1,5 @@
 import QuestionsView from "../components/QuestionsView.js"
+import ModeSelectionView from "./ModeSelectionView.js"
 
 const GameButtonsView = (quizGameView) => {
     let buttonsTemplate = ``
@@ -7,7 +8,7 @@ const GameButtonsView = (quizGameView) => {
 
     const goToRules = () => {
         console.log("Went to rules.")
-        // rules function here
+        ModeSelectionView(gameMode)
     }
 
     const goToHallOfFame = () => {
