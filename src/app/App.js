@@ -13,5 +13,5 @@ export const App = ({ options }) => {
     window.chosenGameMode = "people" // TODO: should update after chosing different gamemodes
     GameButtonsView("rules")
     leftPicture(window.currentQuestion.mode, window.currentQuestion.id)
-    ModeSelectionView('people');
+    ModeSelectionView(window.chosenGameMode);
 }

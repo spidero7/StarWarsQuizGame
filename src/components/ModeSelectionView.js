@@ -46,15 +46,15 @@ const ModeSelectionView = (gameMode) => {
 const gameModeDescription = {
     people: {
         title: 'Who is this character?',
-        description: 'You have one minute (1m) to answer as many questions as possible. During the game you need to choose from available options which character from Star Wars is shown on the left.'
+        description: 'You have one minute (1m) to answer as many questions as possible. During the game you need to choose from available options which character from Star Wars is shown in the picture on the left.'
     },
     vehicles: {
         title: 'Which vehicle is this?',
-        description: 'You have one minute (1m) to answer as many questions as possible. During the game you need to choose from available options which vehicle from Star Wars is shown on the left.'
+        description: 'You have one minute (1m) to answer as many questions as possible. During the game you need to choose from available options which vehicle from Star Wars is shown in the picture on the left.'
     },
     starships: {
         title: 'Which starship is this?',
-        description: 'You have one minute (1m) to answer as many questions as possible. During the game you need to choose from available options which starship from Star Wars is shown on the left.'
+        description: 'You have one minute (1m) to answer as many questions as possible. During the game you need to choose from available options which starship from Star Wars is shown in the picture on the left.'
     }
 }
 

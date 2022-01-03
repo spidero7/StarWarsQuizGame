@@ -15,11 +15,11 @@
 .mode-rules-header {
   font-weight: 600;
   text-align: center;
-  margin: 2vh;
+  margin: 2vh auto 3vh;
 }
 
 #mode-description {
-  height: 60%;
+  height: 50%;
   text-align: justify;
-  padding: 2vh 4vh;
+  padding: 2vh 6vh;
 }
