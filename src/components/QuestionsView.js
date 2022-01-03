@@ -79,9 +79,10 @@ const QuestionsView = async (gameMode) => {
 
     const finishGame = () => {
         window.prompt(`Game finished. Your points: ${window.currentPoints.points} / ${window.currentPoints.askedQuestions}. Enter your name:`)
+        // TODO: Zrobić modal króry będzie przekazywał dane dla hall of fame zamiast promptu.
         document.querySelector(".quiz-game").removeAttribute("data-quiz-game-started")
         document.querySelector(".quiz-game").innerHTML = ""
-        // TODO: Zrobić modal króry będzie przekazywał dane dla hall of fame.
+        document.querySelector('.quiz-progress-countdown').innerHTML = "Time left: 2:00"
         // TODO: Umieścić w tym miejscu funkcje renderującą rules lub hall of fame.
         GameButtonsView("rules") 
         window.currentPoints = { points: 0, askedQuestions: 0 }
@@ -126,7 +127,8 @@ const QuestionsView = async (gameMode) => {
 
         leftPicture(window.currentQuestion.mode, window.currentQuestion.id)
         if(parentElement.getAttribute("data-quiz-game-started") != "") {
-            window.setTimeout(finishGame, 120*1000 + 2000)
+            console.log("Started timeout.")
+            window.setTimeout(finishGame, 60*1000 + 2000)
             progressSword()
             countDown(new Event('submit'))
         }
