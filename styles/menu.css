@@ -16,3 +16,7 @@
   font-weight: 600;
   margin: 2vh;
 }
+
+.active {
+  border-bottom: 5px solid rgba(255, 0, 0, 0.750)!important;
+}

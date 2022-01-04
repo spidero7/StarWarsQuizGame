@@ -5,7 +5,7 @@ const questionsTemplate = `
     <div class="box" id="mode-description">loading...</div>
     `
 
-const ModeSelectionView = (gameMode) => {
+export const ModeSelectionView = (gameMode) => {
     const parentElement = document.querySelector('.quiz-game')
     parentElement.innerHTML = ""
 
@@ -17,21 +17,24 @@ const ModeSelectionView = (gameMode) => {
         let modeTitle = ""
         let modeRules = ""
         switch (gameMode) {
-            case "people":
+            case "People":
+                window.chosenGameMode = 'people'
                 modeTitle = gameModeDescription.people.title
                 modeRules = gameModeDescription.people.description
                 break
-            case "vehicles":
+            case "Vehicles":
+                window.chosenGameMode = 'vehicles'
                 modeTitle = gameModeDescription.vehicles.title
                 modeRules = gameModeDescription.vehicles.description
                 break
-            case "starships":
+            case "Starships":
+                window.chosenGameMode = 'starships'
                 modeTitle = gameModeDescription.starships.title
                 modeRules = gameModeDescription.starships.description
                 break
             default:
-                modeTitle = "undefined"
-                modeRules = "undefined"
+                modeTitle = "Opsss !"
+                modeRules = "Something wen wrong, please refresh"
         }
         template.firstElementChild.innerHTML = `MODE: ${modeTitle}`
         template.lastElementChild.innerHTML = `<p class="mode-rules-header">Mode Rules</p> ${modeRules}`
