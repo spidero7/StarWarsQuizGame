@@ -1,5 +1,6 @@
 import Questions from "./Questions.js"
 import GameButtonsView from "./GameButtonsView"
+import Modal from "./Modal"
 import { leftPicture } from "./images.js"
 import { progressSword } from "../app/wp-lightsaber";
 import { countDown } from "../app/wp-countdown";
@@ -78,7 +79,8 @@ const QuestionsView = async (gameMode) => {
     }
 
     const finishGame = () => {
-        window.prompt(`Game finished. Your points: ${window.currentPoints.points} / ${window.currentPoints.askedQuestions}. Enter your name:`)
+        Modal(window.currentPoints)
+        // window.prompt(`Game finished. Your points: ${window.currentPoints.points} / ${window.currentPoints.askedQuestions}. Enter your name:`)
         // TODO: Zrobić modal króry będzie przekazywał dane dla hall of fame zamiast promptu.
         document.querySelector(".quiz-game").removeAttribute("data-quiz-game-started")
         document.querySelector(".quiz-game").innerHTML = ""
