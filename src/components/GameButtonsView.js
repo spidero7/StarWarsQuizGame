@@ -1,4 +1,5 @@
-import QuestionsView from '../components/QuestionsView.js';
+import QuestionsView from "../components/QuestionsView.js";
+import ModeSelectionView from "./ModeSelectionView.js";
 import showHallOfFame from './HallOfFame';
 
 const GameButtonsView = (quizGameView) => {
@@ -6,12 +7,11 @@ const GameButtonsView = (quizGameView) => {
   const quizGame = document.querySelector('.quiz-game');
   const quizProgress = document.querySelector('.quiz-progress');
 
-  const goToRules = () => {
-    console.log('Went to rules.');
-    quizGame.innerHTML = ``;
-    // rules function here
-    GameButtonsView('rules');
-  };
+    const goToRules = () => {
+        console.log("Went to rules.")
+        quizGame.innerHTML = ``;
+        ModeSelectionView('People');
+    }
 
   const goToHallOfFame = () => {
     console.log('Went to hall of fame.');

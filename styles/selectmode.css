@@ -6,21 +6,20 @@
   font-size: 1.2rem;
 }
 
-.red {
+#mode-title {
   box-shadow: 0px 0px 2vh 0.4vh red;
-}
-
-.title {
   text-align: center;
   font-weight: 600;
 }
 
-.mode-rules {
+.mode-rules-header {
   font-weight: 600;
   text-align: center;
-  margin: 1.5vh;
+  margin: 2vh auto 3vh;
 }
 
-.description {
-  padding: 1vh 1vh 2vh;
+#mode-description {
+  height: auto;
+  text-align: justify;
+  padding: 2vh 6vh 6vh;
 }
