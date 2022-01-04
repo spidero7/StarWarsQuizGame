@@ -19,8 +19,8 @@
 }
 
 #mode-description {
-  height: 50%;
+  height: auto;
   text-align: justify;
   font-weight: 450;
-  padding: 2vh 6vh;
+  padding: 2vh 6vh 6vh;
 }
