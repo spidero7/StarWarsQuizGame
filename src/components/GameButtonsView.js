@@ -9,7 +9,8 @@ const GameButtonsView = (quizGameView) => {
 
     const goToRules = () => {
         console.log("Went to rules.")
-        ModeSelectionView(gameMode)
+        quizGame.innerHTML = ``;
+        ModeSelectionView('People');
     }
 
   const goToHallOfFame = () => {
