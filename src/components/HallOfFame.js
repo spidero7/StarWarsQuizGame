@@ -1,27 +1,19 @@
 // Getting elements
-const hallOfFameContainer = document.querySelector('.quiz-game-ranking');
-
-// Draft data
-const usersScores = [
-  {
-    playerName: 'Luke',
-    score: 30,
-    answers: 50,
-    percentage: 60,
-    mode: 'people',
-  },
-  { playerName: 'Han', score: 20, answers: 80, percentage: 25, mode: 'people' },
-  {
-    playerName: 'R2D2',
-    score: 15,
-    answers: 30,
-    percentage: 50,
-    mode: 'vehicles',
-  },
-];
+const hallOfFameContainer = document.querySelector('.quiz-game');
 
 // Showing Hall of Fame ranking if user've played
 function showHallOfFame() {
+  // Draft data
+  const usersScores = [
+    {
+      playerName: 'Luke',
+      score: 30,
+      answers: 50,
+      percentage: 60,
+      mode: 'people',
+    },
+  ];
+
   // Adding player name and score to Local Storage
   window.localStorage.setItem('user', JSON.stringify(usersScores));
 
@@ -44,10 +36,14 @@ function showHallOfFame() {
   // Switch mode
   const mode = people;
 
+  const rankingContainer = document.createElement('div');
+  rankingContainer.classList.add('quiz-game-ranking');
+  hallOfFameContainer.appendChild(rankingContainer);
+
   const headerRanking = document.createElement('h2');
   headerRanking.innerHTML = 'Mode Ranking';
   headerRanking.classList.add('swquiz-app-hall-of-fame-ranking-header');
-  hallOfFameContainer.appendChild(headerRanking);
+  rankingContainer.appendChild(headerRanking);
 
   const hallOfFameHeaderDiv = document.createElement('div');
   hallOfFameHeaderDiv.classList.add('swquiz-app-hall-of-fame-header');
@@ -56,7 +52,8 @@ function showHallOfFame() {
               <p>Player</p>
               <p>Scores</p>`;
 
-  hallOfFameContainer.appendChild(hallOfFameHeaderDiv);
+  rankingContainer.appendChild(hallOfFameHeaderDiv);
+
   for (let i = 0; i < mode.length; i++) {
     if (true) {
       // Sort by percentage
@@ -76,7 +73,7 @@ function showHallOfFame() {
         hallOfFamePlayerDiv.innerHTML = `<p>${threeHighestScore[i].place}</p>
           <p>${threeHighestScore[i].playerName}</p>
           <p>${threeHighestScore[i].score} / ${threeHighestScore[i].answers}</p>`;
-        hallOfFameContainer.appendChild(hallOfFamePlayerDiv);
+        rankingContainer.appendChild(hallOfFamePlayerDiv);
       }
     }
   }
@@ -90,5 +87,6 @@ function showTextIfNoUserScore() {
   hallOfFameContainer.appendChild(emptyHallOfFame);
 }
 
-showHallOfFame();
 // showTextIfNoUserScore();
+
+export default showHallOfFame;
