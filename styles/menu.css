@@ -1,7 +1,7 @@
 .quiz-menu {
   display: flex;
   justify-content: space-around;
-  height: 30%;
+  height: 40%;
   margin: auto 0px;
   background-color: white;
   border-radius: 2vh;
@@ -14,4 +14,5 @@
   cursor: pointer;
   font-size: 3vh;
   font-weight: 600;
+  margin: 2vh;
 }
