@@ -37,3 +37,14 @@
     padding: 0.5em 1em;
     cursor: pointer;
 }
+
+input {
+    padding: 12px 20px;
+  font-size: 1rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #918e8e;
+  border-radius: 1px;
+  outline: transparent;
+  width: 50%;
+}
