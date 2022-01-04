@@ -33,8 +33,8 @@ export const ModeSelectionView = (gameMode) => {
                 modeRules = gameModeDescription.starships.description
                 break
             default:
-                modeTitle = "Opsss !"
-                modeRules = "Something wen wrong, please refresh"
+                modeTitle = "Oopsss!"
+                modeRules = "Something went wrong, please refresh"
         }
         template.firstElementChild.innerHTML = `MODE: ${modeTitle}`
         template.lastElementChild.innerHTML = `<p class="mode-rules-header">Mode Rules</p> ${modeRules}`
