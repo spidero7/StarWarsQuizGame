@@ -1,57 +1,31 @@
-@import './modern-normalize.css';
-@import '/styles/HallOfFame.css';
-@import './selectmode.css';
-@import './wp-progressSword.css';
-@import './HallOfFame.css';
-@import './GameButtons.css';
-@import './Modal.css';
-
-@import './menu.css';
-@import './questions.css';
-@import './images.css';
+@import './progress_bar';
+@import './main_menu';
+@import './ranking_modal';
+@import './question';
+@import './end_game.css';
+@import './game_rules';
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  background-image: url(../static/assets/ui/QuizBackground.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(../static/assets/ui/QuizBackground.png);
+    background-size: cover;
 }
 
-.quiz-container {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: 30fr 70fr;
-  grid-template-rows: minmax(auto, 25vh) 60fr 15fr;
-  grid-gap: 0.5em;
-  align-content: center;
-  text-align: center;
+:root {
+    --shadow-color-red: rgba(255,0,0,.9);
+  }
+
+#swquiz-app {
+    min-height: 100vh;
+    /* overflow-y: hidden; */
 }
 
-.quiz-progress {
-  grid-column: span 2;
+.btn:focus{
+    outline: none;
 }
-
-/* .quiz-game > div:not([data-active-view]) {
-  display: none;
-}*/
-
-/* .quiz-container > div {
-  border: 2px solid #bbb;
-  border-radius: 10px;
-}*/
-
-.quiz-logo {
-  align-items: center;
-  justify-items: center;
-}
-
-.quiz-logo > img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
