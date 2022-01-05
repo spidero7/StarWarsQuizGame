@@ -1,5 +1,5 @@
 {
-  "name": "@coderscamp2020/project-javascript-typescript-starwarsquiz",
+  "name": "@coderscamp2021/project-1-starwarsquiz",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -16,15 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CodersCamp2020/CodersCamp2020.Project.JavaScript.StarWarsQuiz.git"
+    "url": "git+https://github.com/CodersCamp2021/JoaoTeam-Project-1.git"
   },
   "keywords": [],
   "author": "CodersCamp2020",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CodersCamp2020/CodersCamp2020.Project.JavaScript.StarWarsQuiz/issues"
+    "url": "https://github.com/CodersCamp2021/JoaoTeam-Project-1/issues"
   },
-  "homepage": "https://github.com/CodersCamp2020/CodersCamp2020.Project.JavaScript.StarWarsQuiz#readme",
+  "homepage": "https://github.com/CodersCamp2021/JoaoTeam-Project-1#readme",
   "dependencies": {
     "@babel/runtime": "^7.16.3",
     "intellisense": "^0.0.1",

@@ -1,16 +1,26 @@
-import { doc } from 'prettier';
-import { selectMode } from "./mode-selection.js"
-import { leftPicture } from '../components/images'
-import GameButtonsView from "../components/GameButtonsView"
-import ModeSelectionView from '../components/ModeSelectionView.js';
-export const App = ({ options }) => {
-    // window.askedIds = [] // for debuging
-    window.currentPoints = { points: 0, askedQuestions: 0 }
-    window.currentQuestion = { mode: "people", id: 36 }
-    window.usedQuestionIds = [] // after finished game, this global should be set to empty array + it is used for storing used questions info
-    window.precachedQuestions = [] // after finished game, this global should be set to empty array + it is used for precaching questions
-    window.cachedQuestionsPromises = [] // after finished game, this global should be set to empty array + it is used for limiting the amount of fetches
-    GameButtonsView("rules")
-    leftPicture(window.currentQuestion.mode, window.currentQuestion.id)
-    ModeSelectionView('People');
+import { Questions} from "./Questions";
+import {handleModeUpdate, category} from "./MainMenu";
+import {handleRulesButtonClick, saveHighScore} from "./HallOfFameAndMode";
+export let acceptingMode = true;
+export const App = ({options}) => {
+  const start = document.getElementsByClassName('play-the-game')[0];
+  const rules = document.getElementById("rules__wrapper");
+
+
+ 
+  start.addEventListener("click", () => {
+    Questions(options.swApiBaseUrl,`${category}`);
+    rules.style.display="none";
+    acceptingMode = false;
+   
+  })
+
+  const rulesRankingButton = document.querySelector('.hall-of-fame');
+  rulesRankingButton.addEventListener('click', handleRulesButtonClick);
+
+  const saveScoreBtn = document.getElementById("save-hall-of-fame-button");
+  saveScoreBtn.addEventListener('click',e =>{ saveHighScore(e); acceptingMode = true;});
+ 
+
 }
+
