@@ -4,24 +4,24 @@ import { category } from './MainMenu';
 const textToView = {
   'people': {
     'title': 'Who is this character?',
-    'Rules': 'You have one minute (1m) to answer as many queestions as' +
-      ' possible. During the game on each qustion you need to' +
-      ' select who from Star Wars is showed on left (Jar Jar' +
-      'Binks ringt now) from available options.',
+    'Rules': 'You have one minute (1m) to answer as many questions as' +
+      ' possible. During the game you need to choose from available' +
+      ' options which Star Wars character is shown in the picture' +
+      ' on the left.',
     'Src':'<img src="./static/assets/modes/people/35.png" alt="random character" class="img-rules">'
   },
   'vehicles': {
     'title': 'Do you recognize this vehicle?',
-    'Rules': 'You have one minute (1m) to answer as many questions as possible.' +
-      ' During the game on each question you need to select who from Star Wars' +
-      ' is showed on the left (Jar Jar Binks right now) from available options.',
+    'Rules':  'You have one minute (1m) to answer as many questions as possible.' +
+      ' During the game you need to choose from available options which Star Wars' +
+      ' vehicle is shown in the picture on the left.',
     'Src':'<img src="./static/assets/modes/vehicles/4.png" alt="random character" class="img-rules">'
   },
   'starships': {
     'title': 'Do you recognize this starship?',
     'Rules': 'You have one minute (1m) to answer as many questions as possible.' +
-      ' During the game on each question you need to select which starship' +
-      ' from Star Wars is showed on the left.',
+      ' During the game you need to choose from available options which Star Wars' +
+      ' starship is shown in the picture on the left.',
     'Src':  '<img src="./static/assets/modes/starships/13.png" alt="random character" class="img-rules">'
   },
 };
