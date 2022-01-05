@@ -31,14 +31,24 @@ Layout responsiveness was obtained using a CSS Gird and relative units. The clie
 4. After the game, the player's score is saved locally in a ranking for the browser via LocalStorage and the 3 best results are shown as the Hall of Fame.
 
 ### Setup
-To run this project locally, install it using npm:
+To run this project locally, run bellow commands:
 ```
+$ git clone https://github.com/CodersCamp2021/JoaoTeam-Project-1.git
 $ npm install
 $ npm run start:dev
 ```
 
+### Build
+To build this project run bellow commands:
+
+```
+$ git clone https://github.com/CodersCamp2021/JoaoTeam-Project-1.git
+$ npm install
+$ npm run build
+```
+
 ### Room for Improvement
-In the next step, tests should be implemented in the application. At the moment, the client agreed to forgo them due to limited time.
+In the next step, more tests should be implemented in the application. At the moment, the client agreed to forgot them due to limited time.
 
 ### Acknowledgements
 This project was based on [this idea](https://github.com/CodersCamp2020/CodersCamp2020.Project.JavaScript.StarWarsQuiz/blob/main/README.md).
